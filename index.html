@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo app</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  
+ 
+<div>
+  <p id="name_dis" ></p>
+  <h1>To-Do List</h1>
+  
+  <div class="input_take">
+    <input id="task" type="text" placeholder="Enter the task">
+    <input id="date" type="date">
+    <button id="add" onclick="
+      storeele();
+      display();
+    ">Add</button>
+  </div>
+  <div class="display-container"></div>
+
+  <button id="Reset" onclick=" 
+  localStorage.clear();
+  todo_list.splice(0,todo_list.length);
+  display();
+  name_fn();
+  "></button>
+
+<div id="name_whole_con" >
+  <div>
+  <p id="enter_name">Enter your name</p>
+  </div>
+  <span id="name_con">
+  <input id="name_in" type="text" placeholder="Enter your Name">
+  <button id="name_sub" onclick=" name_submit(); display();">Submit</button>
+  </span>
+</div>
+</div>
+  <script src="todo.js"></script>
+</body>
+</html>
