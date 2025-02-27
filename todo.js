@@ -1,4 +1,4 @@
-let todo_list=[];
+let todo_list;
 
 let save= localStorage.getItem('Score_Save');
 //console.log("save",save);
@@ -75,7 +75,7 @@ function name_fn(save_name){
   }
   else {
     document.querySelector('#name_whole_con').hidden=false;
-    //name_org='';
+    name_org='';
   }
   localStorage.setItem('name',JSON.stringify(name_org));
 }
@@ -88,7 +88,7 @@ function name_submit(){
 }
 
 
-if (save_name==undefined){
+if (save_name==''){
   document.querySelector('#name_whole_con').hidden=false;
 }
 // if (save_name==null){
