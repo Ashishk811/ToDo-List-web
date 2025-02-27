@@ -5,7 +5,7 @@ let save= localStorage.getItem('Score_Save');
 
 reset_Score(save);
 function reset_Score(save_t){
-  if(save_t!== null ) {
+  if(save_t) {
     todo_list=JSON.parse(save_t);
     }
   else{
@@ -63,7 +63,7 @@ let save_name= localStorage.getItem('name');
 name_fn(save_name);
 
 function name_fn(save_name){
-  if (save_name!==undefined ){
+  if (save_name){
     document.querySelector('#name_whole_con').hidden=true;
     name_org=JSON.parse(save_name);
     let date=new Date();
